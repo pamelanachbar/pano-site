@@ -1,0 +1,642 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+nav{
+  margin-top: 3%;
+}
+
+#container {
+  width: auto;
+  overflow: hidden;
+  position: relative;
+
+}
+
+#video-wrapper {
+  position: relative;
+  width: 100%;
+
+}
+
+video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+#video-transparencia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+  pointer-events: none;
+}
+
+ #container-nav{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    align-items: center;
+    justify-self: center;
+ }
+ nav{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    justify-self: center;
+    gap: 4%;
+ }
+
+ #container-nav a{
+    font-family: "Montserrat";
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+ }
+
+#container-h1 {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: 80%;
+}
+
+h1 {
+  font-family: "Poppins";
+  text-align: justify;
+  font-weight: 700;
+}
+
+#container-texto{
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-align: center;
+  font-weight: 300;
+}
+
+#container-texto p{
+  text-align: center;
+}
+
+
+button{
+  font-family: "Montserrat";
+  background-color: #590808;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border: 3px solid transparent;
+  z-index: 1;
+}
+
+button:hover{
+  border: 3px solid #590808;
+  background-color: white;
+  color: #590808;
+
+}
+
+#container-carrossel{
+  position: relative;
+  margin-top: 30px;
+  font-family: "Montserrat";
+  margin-top: 50px;
+   background-color: #590808; 
+  /*background-image: linear-gradient(#590808 80%,black);*/
+  color: white;
+  
+}
+
+#container-carrossel > h2{
+  text-align: center;
+  
+}
+
+#container-carrossel > p{
+  text-align: center;
+}
+#carrossel > img{
+  width: 60vw;
+  border-radius: 20px;
+  margin: auto;
+}
+
+#imagemAnterior, #imagemProxima {
+  position: absolute;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  background-color: transparent;
+  padding: 10px;
+}
+
+
+
+/* 
+#gradient{
+  position: relative;
+  top: -50px;
+  height: 20vw;
+  z-index: -1;
+} */
+
+#container-conheca{
+  font-family: "Montserrat";
+  padding-top: 50px;
+  color: white;
+  background-color: black;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#container-conheca h2{
+  font-size: 2em;
+}
+
+#container-pai{
+  margin-top: 30px;
+}
+
+#texto{
+  display: inline-block;
+  vertical-align: middle;
+  width: 50% ;
+}
+
+#texto img{
+  padding: 10px;
+}
+
+#texto p{
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+#imagem{
+  display: inline-block;
+  vertical-align:middle;
+}
+
+.vl{
+  display: inline-block;
+  border-radius: 50px;
+  height: 200px;
+  vertical-align: middle;
+  border-left: 1px white solid;
+  opacity: 0.5;
+}
+
+.hr{
+  margin-top: 5%;
+  border-bottom: 1px white solid;
+  margin-left: 40px;
+  margin-right: 40px;
+  opacity: 0.5;
+}
+
+#container-conheca{
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+
+#container-conheca > h2{
+  color: rgb(0, 0, 0);
+}
+
+#container-conheca-paragrafo{
+  color: black;
+  text-align: justify;
+
+}
+
+footer{
+
+  background-color: rgb(16, 16, 63);
+  height: 200px;
+}
+@media screen and (max-width: 601px){
+    h1{
+        font-size: 1.9em;
+        width: 290px;
+    }
+
+  #container-h1{
+    top: 30%;
+    left: 4%;
+  }
+
+
+ #container-texto > h2{
+  font-size: 2.2em;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+ }
+
+ #container-texto p{
+  font-size: 1.3em;
+  margin: 40px;
+  text-align: center;
+
+  
+ }
+
+ button{
+  width: 40vw;
+  padding: 20px;
+ 
+ }
+
+ #container-carrossel{
+  padding-bottom: 50px;
+ }
+/* 
+ #container-carrossel{
+  margin-top: 50px;
+  background-color: #590808;
+  color: white;
+} */
+
+#container-carrossel > h2{
+  font-size: 2em;
+  padding-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#container-carrossel > p{
+  margin: 20px;
+  font-size: 1.3em;
+  font-weight: 100;
+}
+
+  #imagemAnterior,
+  #imagemProxima {
+    top: 75%;
+    width: 40px;
+    height: 40px;
+  }
+
+  #imagemAnterior svg,
+  #imagemProxima svg {
+    width: 20px;
+    height: 20px;
+  
+  }
+
+ #imagemAnterior {
+  left: 20px;
+}
+
+#imagemProxima {
+  right: 20px;
+}
+#container-conheca > h2{
+  font-size: 2em;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+#segunda-logo{
+  padding-top: 20px;
+  height: 100px;
+  width: 200px;
+}
+
+#container-conheca-paragrafo{
+  font-size: 1em;
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 300px;
+}
+}
+
+@media screen and (min-width: 602px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+    width: 400px;
+  }
+
+  #container-h1{
+    top: 30%;
+    left: 6%;
+  } 
+   /*
+    #container-nav{
+      width: 100%;
+    }
+
+    nav{
+      width: 100%;
+    }
+
+    #container-nav a{
+      padding: 40px;
+  }*/ 
+
+
+ #container-texto > h2{
+  font-size: 2.7em;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+ }
+
+ #container-texto p{
+  font-size: 1.3em;
+  margin: 40px;
+  
+ }
+
+ button{
+  width: 40vw;
+  padding: 20px;
+ }
+
+ #container-carrossel{
+  margin-top: 60px;
+  background-color: #590808;
+  color: white;
+  padding-bottom: 70px;
+}
+
+#container-carrossel > h2{
+  font-size: 2.7em;
+  padding-top: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+#container-carrossel > p{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-size: 1.3em;
+  font-weight: 100;
+}
+
+#imagemAnterior,
+  #imagemProxima {
+    top: 75%;
+    width: 60px;
+    height: 60px;
+  }
+
+  #imagemAnterior svg,
+  #imagemProxima svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  #imagemAnterior {
+  left: 20px;
+}
+
+#imagemProxima {
+  right: 20px;
+}
+
+#container-conheca > h2{
+  font-size: 2.5em;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+#segunda-logo{
+  padding-top: 20px;
+  height: 150px;
+  width: 300px;
+}
+
+#container-conheca-paragrafo{
+  font-size: 1.3em;
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 400px;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3em;
+        width: 500px;
+      }
+
+   
+    /* #container-nav a{
+        margin-right: 2%;
+        padding: 20px;
+    } 
+     */
+      #container-h1{
+        top: 30%;
+        left: 6%;
+      }
+ 
+     
+      #container-texto > h2{
+        font-size: 3em;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+       }
+      
+       #container-texto p{
+        font-size: 1.5em;
+        margin: 40px;
+        
+       }
+      
+       button{
+        width: 30vw;
+        padding: 20px;
+        /* margin-bottom: ; */
+       }
+
+       #container-carrossel{
+        margin-top: 70px;
+        background-color: #590808;
+        color: white;
+        padding-bottom: 70px;
+      }
+
+      #container-carrossel > h2{
+        font-size: 3em;
+        padding-top: 60px;
+        padding-left: 150px;
+        padding-right: 150px;
+      }
+
+      #container-carrossel > p{
+        margin: 40px;
+        font-size: 1.5em;
+        font-weight: 100;
+      }
+
+      #imagemAnterior,
+  #imagemProxima {
+    top: 75%;
+    width: 70px;
+    height: 70px;
+  }
+
+  #imagemAnterior svg,
+  #imagemProxima svg {
+    width: 50px;
+    height: 50px;
+  }
+ #imagemAnterior {
+  left: 7%;
+}
+
+#imagemProxima {
+  right: 7%;
+}
+
+#container-conheca > h2{
+  font-size: 3em;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+
+
+#segunda-logo{
+  padding-top: 40px;
+  height: 150px;
+  width: 300px;
+}
+
+#container-conheca-paragrafo{
+  font-size: 1.3em;
+  padding-top: 40px;
+  padding-left: 40px;
+  width: 450px;
+}
+}
+
+@media screen and (min-width: 1025px) {
+    h1 {
+        font-size: 5em;
+        width: 800px;
+      }
+    
+      #container-h1{
+        top: 30%;
+        left: 8%;
+      }
+
+      
+      #container-texto > h2{
+        font-size: 4em;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 50px;
+       }
+      
+       #container-texto p{
+        font-size: 1.5em;
+        width: 700px;
+        text-align: center;
+        margin: auto;
+
+       }
+      
+       button{
+        margin-top: 50px;
+        width: 20vw;
+        padding: 20px;
+       }
+
+       #container-carrossel{
+        margin-top: 80px;
+        background-color: #590808;
+        color: white;
+        padding-bottom:90px ;
+      }
+
+            
+      #container-carrossel > h2{
+        font-size: 3.5em;
+        padding-top: 60px;
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+
+      #container-carrossel > p{
+        margin: 30px;
+        font-size: 1.7em;
+        font-weight: 100;
+      }
+
+        #imagemAnterior,
+  #imagemProxima {
+    top: 65%;
+    width: 80px;
+    height: 80px;
+  }
+
+  #imagemAnterior svg,
+  #imagemProxima svg {
+    width: 60px;
+    height: 60px;
+  }
+    
+  #imagemAnterior {
+  left: 9%;
+}
+
+#imagemProxima {
+  right: 9%;
+}
+
+#container-conheca > h2{
+  font-size: 4em;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+
+#segunda-logo{
+  padding-top: 40px;
+  height: 200px;
+  width: 350px;
+}
+
+#container-conheca-paragrafo{
+  font-size: 1.3em;
+  padding-top: 40px;
+  padding-left: 40px;
+  width: 450px;
+}
+      }

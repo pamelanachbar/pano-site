@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeira FECITEC</title>
+      <link rel="stylesheet" href="galeria-fecitec-style.css">
+</head>
+<body>
+    <div id="container-nav">
+       <div id="menu-icon"><img src="assets/icone/icone-menu.png" alt="Ícone de menu"></div>
+      <nav id="main-menu">
+        <a href="./index.html">HOME</a>
+        <a href="tour.html">EXPLORAR</a>
+        <a href="wifi.html">WI-FI</a>
+        <a href="#">SOBRE NÓS</a>
+      </nav>
+    </div>
+    <main>
+        <div id="galeria">
+             <img src="assets/imagens/galeria/20n.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria/10n.jpg" alt="" class="foto-zoom" >
+             <img src="assets/imagens/galeria/19n.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria/21n.jpg" alt="" class="foto-zoom">
+              <img src="assets/imagens/galeria/15n.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria/16n.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria/17n.jpg" alt="" class="foto-zoom esquerda">
+             <img src="assets/imagens/galeria/5n.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria/21n.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria/6n.jpg" alt="" class="foto-zoom">
+             <img src="assets/imagens/galeria/27n.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria/28n.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria/7n.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria/8n.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria/24n.jpg" alt="" class="foto-zoom">
+              <img src="assets/imagens/galeria/11n.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria/18n.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria/12n.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria/13n.jpg" alt="" class="foto-zoom"> 
+         <img src="assets/imagens/galeria/9n.jpg" alt="" class="foto-zoom">
+             <img src="assets/imagens/galeria/1n.jpg"  alt="" class="foto-zoom esquerda">   
+              <img src="assets/imagens/galeria/3n.jpg" alt="" class="foto-zoom">
+               <img src="assets/imagens/galeria/23n.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria/25n.jpg" alt="" class="foto-zoom">
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+  <span id="fechar">&times;</span>
+  <img id="imgModal" class="modal-conteudo" alt="Imagem ampliada">
+</div>
+</body>
+
+<script>
+  const modal = document.getElementById("modal");
+  const imgModal = document.getElementById("imgModal");
+  const imagens = document.querySelectorAll(".foto-zoom");
+  const fechar = document.getElementById("fechar");
+
+  imagens.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex"; 
+      imgModal.src = img.src; 
+      imgModal.alt = img.alt;
+    });
+  });
+
+  fechar.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Fechar ao clicar fora da imagem
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  const menuIcon = document.getElementById('menu-icon');
+const mainMenu = document.getElementById('main-menu');
+
+let clicou = false;
+
+menuIcon.addEventListener('click', () => {
+  clicou = !clicou; // alterna true <-> false
+  mainMenu.classList.toggle('show');
+
+  if (clicou) {
+    menuIcon.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    menuIcon.style.width = '100%';
+  } else {
+    menuIcon.style.backgroundColor = '';
+    menuIcon.style.width = '';
+  }
+});
+</script>
+</html>

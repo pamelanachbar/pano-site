@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href=tour_style.css>
+</head>
+<body>
+    <div id="container"  data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <div id="container-nav">
+       <div id="menu-icon"><img src="assets/icone/icone-menu.png" alt="Ícone de menu"></div>
+      <nav id="main-menu">
+        <a href="./index.html">HOME</a>
+        <a href="tour.html">EXPLORAR</a>
+        <a href="wifi.html">WI-FI</a>
+        <a href="#">SOBRE NÓS</a>
+      </nav>
+    </div>
+  
+      <div id="container-h1">
+        <h1>Galeria de fotos</h1>
+      </div>
+    </div>
+
+    <main>
+        <div id="container-apresentacao">
+            <h2>Fotos de Eventos Recentes</h2>
+            <p>O COTIL é uma instituição que preza muito por eventos com a comunidade escolar, visitantes e familiares. Todos os anos o COTIL conta com palestra, FECITEC e COPA. Veja abaixo as opções e escolha qual fotos é do seu interesse</p>
+        </div>
+
+        <div id="container-galerias">
+            <div id="container-galeria-fecitec">
+                <h3>FECITEC</h3>
+                <p>A FECITEC – Feira de Ciência e Tecnologia – é um evento que promove a integração e a divulgação dos projetos. A feira contempla desde diversas oficinas até a apresentação de projetos integradores, voltados especialmente aos alunos da comunidade escolar interna. Clique abaixo para visualizar a galeria</p>
+                <a href="galeria-fecitec.html">Visitar</a>
+            </div>
+            <div id="container-galeria-copa">
+            <h3>COPA</h3>
+            <p>A COPA – Cotil de Portas Abertas – é um evento dedicado à apresentação de projetos desenvolvidos pelos alunos, como experimentos científicos, projetos integradores, salas temáticas de competição e trabalhos com Arduino. Clique abaixo para visualizar a galeria</p>
+            <a href="galeria-copa.html">Visitar</a>
+            </div>
+        </div>
+    </main>
+  </div>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+const mainMenu = document.getElementById('main-menu');
+
+let clicou = false;
+
+menuIcon.addEventListener('click', () => {
+  clicou = !clicou; 
+  mainMenu.classList.toggle('show');
+
+  if (clicou) {
+    menuIcon.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    menuIcon.style.width = '100%';
+  } else {
+    menuIcon.style.backgroundColor = '';
+    menuIcon.style.width = '';
+  }
+});
+
+  </script>
+</body>
+</html>

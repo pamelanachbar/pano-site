@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeira FECITEC</title>
+      <link rel="stylesheet" href="galeria-fecitec-style.css">
+</head>
+<body>
+    <div id="container-nav">
+       <div id="menu-icon"><img src="assets/icone/icone-menu.png" alt="Ícone de menu"></div>
+      <nav id="main-menu">
+        <a href="./index.html">HOME</a>
+        <a href="tour.html">EXPLORAR</a>
+        <a href="wifi.html">WI-FI</a>
+        <a href="#">SOBRE NÓS</a>
+      </nav>
+    </div>
+    <main>
+        <div id="galeria">
+           
+            <img src="assets/imagens/galeria-copa/4.jpg" alt="" class="foto-zoom">
+              <img src="assets/imagens/galeria-copa/5.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria-copa/6.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria-copa/7.jpg" alt="" class="foto-zoom esquerda">
+             <img src="assets/imagens/galeria-copa/8.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria-copa/9.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria-copa/10.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria-copa/12.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria-copa/13.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria-copa/14.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria-copa/15.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria-copa/16.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria-copa/17.jpg" alt="" class="foto-zoom">
+            <img src="assets/imagens/galeria-copa/18.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria-copa/19.jpg" alt="" class="foto-zoom"> 
+            <img src="assets/imagens/galeria-copa/20.jpg" alt="" class="foto-zoom">
+             <img src="assets/imagens/galeria-copa/21.jpg"  alt="" class="foto-zoom esquerda">   
+               <img src="assets/imagens/galeria-copa/1.jpg" alt="" class="foto-zoom esquerda">
+            <img src="assets/imagens/galeria-copa/2.jpg" alt="" class="foto-zoom" >
+             <img src="assets/imagens/galeria-copa/3.jpg" alt="" class="foto-zoom esquerda">
+              <img src="assets/imagens/galeria-copa/11.jpg" alt="" class="foto-zoom">
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+  <span id="fechar">&times;</span>
+  <img id="imgModal" class="modal-conteudo" alt="Imagem ampliada">
+</div>
+</body>
+
+<script>
+  const modal = document.getElementById("modal");
+  const imgModal = document.getElementById("imgModal");
+  const imagens = document.querySelectorAll(".foto-zoom");
+  const fechar = document.getElementById("fechar");
+
+  imagens.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex"; 
+      imgModal.src = img.src; 
+      imgModal.alt = img.alt;
+    });
+  });
+
+  fechar.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Fechar ao clicar fora da imagem
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  const menuIcon = document.getElementById('menu-icon');
+const mainMenu = document.getElementById('main-menu');
+
+let clicou = false;
+
+menuIcon.addEventListener('click', () => {
+  clicou = !clicou; // alterna true <-> false
+  mainMenu.classList.toggle('show');
+
+  if (clicou) {
+    menuIcon.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    menuIcon.style.width = '100%';
+  } else {
+    menuIcon.style.backgroundColor = '';
+    menuIcon.style.width = '';
+  }
+});
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PANO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="container-nav">
+      <nav>
+        <a href="#">Ícone</a>
+        <a href="explorar.html">EXPLORAR</a>
+        <a href="#">TOUR</a>
+        <a href="wifi.html">WI-FI</a>
+        <a href="#">SOBRE NÓS</a>
+      </nav>
+    </div>
+    <div id="video-wrapper">
+      <video src="assets/video.mp4" autoplay loop muted></video>
+      <div id="video-transparencia"></div>
+
+      <div id="container-h1">
+
+        <h1>Portal Acadêmico <br>de Navegação e <br>Observação</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="container-texto">
+    <h2>Descubra o COTIL sem <br>sair de casa</h2>
+    <p>Faça um tour virtual pelo COTIL, direto do seu celular ou computador, no conforto da sua casa</p>
+    <button>INICIAR TUOR</button>
+  </div>
+
+  <div id="container-carrossel">
+    <h2>Não sabe por onde <br>começar?</h2>
+    <p>Conheça os principais ambientes antes de <br>explorar por conta própria</p>
+
+    <div id="carrossel">
+      <img src="assets/imagens/foto4.jpg" class="carrossel-img" style="display: block;">
+      <img src="assets/imagens/foto5.jpg" class="carrossel-img" style="display: none;">
+      <img src="assets/imagens/foto6.jpg" class="carrossel-img" style="display: none;">
+
+      <button onclick="imagemAnterior()" id="imagemAnterior">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+          <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+        </svg>
+      </button>
+
+      <button onclick="imagemProxima()" id="imagemProxima"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960" fill="#FFFFFF">
+          <path d="m309.67-81.33-61-61.67L587-481.33 248.67-819.67l61-61.66 400 400-400 400Z" />
+        </svg></button>
+    </div>
+
+
+
+
+  </div>
+
+  <div id="gradient">
+  </div>
+
+  <div id="container-conheca">
+    <h2>Conheça o Pano</h2>
+    <div><img src="assets/imagens/segunda-logo.png" alt="Logo do Pano" id="segunda-logo"></div>
+    <div id="container-conheca-paragrafo">
+      <p>O Portal Acadêmico de Navegação e Observação oferece um Tour 360° do COTIL, facilitando o acesso e a
+        localização nos Campus I e II de forma prática e acessível.</p>
+    </div>
+  </div>
+
+  <footer></footer>
+  <script>
+    let indiceAtual = 0;
+    const imagens = document.querySelectorAll(".carrossel-img");
+    const totalImagens = imagens.length;
+
+    function mostrarImagem(indice) {
+      imagens.forEach((img, i) => {
+        img.style.display = i === indice ? "block" : "none";
+      });
+    }
+
+    function imagemProxima() {
+      indiceAtual = (indiceAtual + 1) % totalImagens;
+      mostrarImagem(indiceAtual);
+    }
+
+    function imagemAnterior() {
+      indiceAtual = (indiceAtual - 1 + totalImagens) % totalImagens;
+      mostrarImagem(indiceAtual);
+    }
+
+    // Troca automática a cada 10 segundos
+    setInterval(imagemProxima, 10000);
+  </script>
+
+</body>
+
+</html>
