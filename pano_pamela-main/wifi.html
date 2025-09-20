@@ -9,21 +9,85 @@
 </head>
 
 <body>
-    <nav>
-        <a href="/index.html">Ícone</a>
-        <a href="/explorar.html">EXPLORAR</a>
-        <a href="#">TOUR</a>
-        <a href="/wifi.html">WI-FI</a>
-        <a href="#">SOBRE NÓS</a>
-    </nav>
 
-    <main>
-        <div id="conteiner-h1">
-            <h1>Conecte-se na</h1>
-            <h1 id="vermelho">Eduroam</h1>
+    <div id="container">
+          <div id="container-nav">
+       <div id="menu-icon"><img src="assets/icone/icone-menu.png" alt="Ícone de menu"></div>
+      <nav id="main-menu">
+        <a href="./index.html">HOME</a>
+        <a href="tour.html">EXPLORAR</a>
+        <a href="wifi.html">WI-FI</a>
+        <a href="sobre.html">SOBRE NÓS</a>
+      </nav>
+    </div>
+      <section id="principal">
+      <div class="texto-principal">
+        <h1>Conecte-se na</h1>
+        <span>Eduroam</span>
+        <p>Siga nosso guia simples e acesse a rede Eduroam para navegar e estudar sem complicação</p>
+        <button>Ver Tutorial</button>
+      </div>
+        </section>
+      
+        <section id="plataforma">
+      <h2>Selecione sua Plataforma</h2>
+      <div class="botoes-plataforma">
+        <a href="https://www.youtube.com/watch?v=wqFZpF1r1q8"><button class="botao-plataforma"> iOS</button></a>
+        <a href="https://www.youtube.com/watch?v=m21s6fDmWmg"><button class="botao-plataforma"> Android</button></a>
+      </div>
+        </section>
+      
+        <section class="tutorial" id="android">
+      <h2>Android</h2>
+      <ul>
+        <li>No <strong>Método EAP</strong>, selecionar a opção <strong>TTLS</strong></li>
+        <li>Em <strong>Certificado de CA</strong>, colocar em <strong>Não Validar</strong></li>
+        <li>Na aba <strong>Autenticação de Fase</strong>, colocar a opção <strong>PAP</strong></li>
+        <li>Em <strong>Identidade</strong>, inserir o email: <strong>cl + Seu RA + @unicamp.br</strong></li>
+        <li>No campo <strong>Senha</strong>, digitar a sua senha do email institucional</li>
+      </ul>
+      <p class="final">Pronto! Agora é só <span>conectar-se</span></p>
+        </section>
+      
+        <div id="ios">
+      <section class="tutorial" id="">
+      <h2>iOS</h2>
+      <ul>
+        <li>Acesse a página <strong><a href="https://cat.eduroam.org/">CAT EDUROAM</a></strong> e clique no botão <strong>Download</strong></li>
+        <li>Entre em <strong>Ajustes > Geral > Gestão de VPN e dispositivo</strong>, inicie a instalação do <strong>Eduroam</strong> e siga as instruções.</li>
+        <li>Na aba <strong>Autenticação de Fase</strong>, colocar a opção <strong>PAP</strong></li>
+        <li>Em <strong>Usuário</strong>, inserir o email: <strong>cl + Seu RA + @unicamp.br</strong></li>
+        <li>No campo <strong>Senha</strong>, digitar a sua senha do email institucional</li>
+      </ul>
+      <p class="final">Pronto! Agora é só <span>conectar-se</span></p>
+        </section>
         </div>
-    </main>
+      
+        <section id="ajuda">
+      <h2>Ainda com dúvidas?</h2>
+      <p>Escolha o sistema operacional do seu dispositivo e assista ao tutorial para configurar o acesso à rede eduroam</p>
+        </section>
+    </div>
+</body>
 
-</body>    
+<script>
+    
+const menuIcon = document.getElementById('menu-icon');
+const mainMenu = document.getElementById('main-menu');
 
+let clicou = false;
+
+menuIcon.addEventListener('click', () => {
+  clicou = !clicou; 
+  mainMenu.classList.toggle('show');
+
+  if (clicou) {
+    menuIcon.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    menuIcon.style.width = '100%';
+  } else {
+    menuIcon.style.backgroundColor = '';
+    menuIcon.style.width = '';
+  }
+});
+</script>
 </html>

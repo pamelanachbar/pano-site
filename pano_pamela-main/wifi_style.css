@@ -1,9 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap');
 
 * {
   margin: 0;
@@ -11,42 +7,386 @@
   box-sizing: border-box;
 }
 
-body, html{
-    
- nav{
-    display: flex;
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+
+
+#menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+
+
+#container {
+  width: auto;
+  overflow: hidden;
+  position: relative;
+
+}
+
+nav {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-self: center;
+  gap: 4%;
+}
+
+#container-nav a {
+  font-family: "Montserrat";
+  font-weight: 200;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+
+.logo {
+  height: 30px;
+  margin-right: 20px;
+}
+
+#principal {
+  text-align: left;
+  padding: 60px 8%;
+}
+
+#principal h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+#principal .texto-principal {
+  text-align: left;
+}
+
+#principal .texto-principal button {
+  display: block;
+  margin-left: auto; 
+}
+
+#principal span {
+  color: #b10000;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+#principal p {
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 20px;
+  border: none;
+  background: #590808;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #fff;
+  color: #590808;
+  border: 2px solid #590808;
+}
+
+#plataforma {
+  background: #590808;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#plataforma h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.botoes-plataforma {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.botao-plataforma {
+  background: #fff;
+  color: #000;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.botao-plataforma:hover {
+  background: #b10000;
+  color: #fff;
+}
+
+.tutorial {
+  padding: 60px 8%;
+}
+
+.tutorial h2 {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 25px;
+}
+
+#ios{
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.tutorial ul {
+  list-style: none;
+}
+
+.tutorial li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.tutorial strong {
+  color: #b10000;
+}
+
+.tutorial .final {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.tutorial .final span {
+  color: #b10000;
+}
+
+#ajuda {
+  background: #590808;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#ajuda h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+#ajuda p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 601px) {
+   #menu-icon {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+
+  }
+
+  #menu-icon img {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+  #main-menu {
     position: absolute;
-    z-index: 2;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 15px;
-    flex-flow: row nowrap;
-    justify-content: center;
-    justify-self: center;
-    align-items: center;
-    justify-self: center;
-    gap: 4%;
-    margin-top: 3%;
- }
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 20px 0;
+    z-index: 1001;
+  }
 
-   nav a{
-    font-family: "Montserrat";
-    font-weight: 200;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-   }
+  nav#main-menu {
+  padding: 0;             
+  padding-top: 56px;        
+  align-items: center;
+}
 
-   #container-h1 {
+#main-menu a {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+
+  #main-menu > a {
+  padding: 5px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  }
+
+  #main-menu a:hover {
+  color: black;
+   
+}
+
+  #main-menu.show {
+    display: flex;
+  }
+}
+@media screen and (min-width: 602px) and (max-width: 768px) {
+   #menu-icon {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+
+  }
+
+  #menu-icon img {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+  #main-menu {
     position: absolute;
-    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 20px 0;
+    z-index: 1001;
+  }
+
+  nav#main-menu {
+  padding: 0;             
+  padding-top: 56px;        
+  align-items: center;
+}
+
+#main-menu a {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+
+  #main-menu > a {
+  padding: 5px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  }
+
+  #main-menu a:hover {
+  color: black;
+   
+}
+
+  #main-menu.show {
+    display: flex;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   #menu-icon {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+
+  }
+
+  #menu-icon img {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+  #main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 20px 0;
+    z-index: 1001;
+  }
+
+  nav#main-menu {
+  padding: 0;             
+  padding-top: 56px;        
+  align-items: center;
+}
+
+#main-menu a {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+
+  #main-menu > a {
+  padding: 5px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  }
+
+  #main-menu a:hover {
+  color: black;
+   
+}
+
+  #main-menu.show {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  #principal {
     text-align: center;
-    color: rgb(0, 0, 0);
-    width: 80%;
-    font-family: "Montserrat";
-    font-weight: bold;
-   }
-
-
-  #vermelho {
-    color: red;
+  }
+  #principal p {
+    margin: auto;
+  }
+  nav {
+    justify-content: center;
   }
 }

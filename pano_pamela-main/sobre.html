@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANO</title>
+    <link rel="stylesheet" href="sobre_style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="container-nav">
+       <div id="menu-icon"><img src="assets/icone/icone-menu.png" alt="Ícone de menu"></div>
+      <nav id="main-menu">
+        <a href="./index.html">HOME</a>
+        <a href="tour.html">EXPLORAR</a>
+        <a href="wifi.html">WI-FI</a>
+        <a href="sobre.html">SOBRE NÓS</a>
+      </nav>
+    </div>
+        <main>
+            <div id="foto">
+                <img src="foto da gente junto" alt="" style="background-color: black; height: 2rem;">
+            </div>
+
+            <div id="sobre-texto">
+                <h1>SOBRE NÓS</h1>
+                <div id="paragrafos">
+                    <p>Somos uma equipe do PIBIC (Programa Institucional de Bolsas de Iniciação Científica) do COTIL que atua de forma totalmente híbrida, composta por alunos de alto desempenho. Nosso propósito é enfrentar os desafios relacionados à acessibilidade e à promoção de facilidades para os alunos do COTIL e para toda a comunidade escolar, sempre buscando inovação, inclusão e melhoria contínua.
+                </div>
+            </div>
+
+            <div class="perfis-container">
+                <h1>NÓS!</h1>
+
+                <div class="cards">
+                    <div class="card">
+                        <div class="imagem-perfil">
+                            <img src="assets/imagens/foto-sobre-nos/danilo.jpeg" alt=""
+                                style="background-color: black; width: 100px; height: 100px; border-radius: 100px; ">
+                        </div>
+                        <div class="texto-perfil">
+                            <h3>Danilo Rodrigues Pereira</h3>
+                            <h4>Orientador</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imagem-perfil">
+                            <img src="assets/imagens/foto-sobre-nos/joel.jpeg" alt="" class="foto-card">
+                        </div>
+                        <div class="texto-perfil">
+                            <h3>Joel João de Araujo Neto</h3>
+                            <h4>Estudante</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imagem-perfil">
+                            <img src="assets/imagens/foto-sobre-nos/maria.png" alt=""
+                                style="background-color: black; width: 100px; height: 100px; border-radius: 100px; ">
+                        </div>
+                        <div class="texto-perfil">
+                            <h3>Maria Clara Felix</h3>
+                            <h4>Estudante</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imagem-perfil">
+                            <img src="assets/imagens/foto-sobre-nos/mariana.jpeg" alt=""
+                                style="background-color: black; width: 100px; height: 100px; border-radius: 100px; ">
+                        </div>
+                        <div class="texto-perfil">
+                            <h3>Mariana Nogueira do Nascimento</h3>
+                            <h4>Estudante, Web</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imagem-perfil">
+                            <img src="assets/imagens/foto-sobre-nos/pamela.jpeg" alt=""
+                                style="background-color: black; width: 100px; height: 100px; border-radius: 100px; ">
+                        </div>
+                        <div class="texto-perfil">
+                            <h3>Pamela Nachbar</h3>
+                            <h4>Estudante</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imagem-perfil">
+                            <img src="assets/imagens/foto-sobre-nos/vitoria.jpg" alt=""
+                                style="background-color: black; width: 100px; height: 100px; border-radius: 100px; ">
+                        </div>
+                        <div class="texto-perfil">
+                            <h3>Vitória Ferreira Lima</h3>
+                            <h4>Estudante</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+   <script>
+    const menuIcon = document.getElementById('menu-icon');
+const mainMenu = document.getElementById('main-menu');
+
+let clicou = false;
+
+menuIcon.addEventListener('click', () => {
+  clicou = !clicou; 
+  mainMenu.classList.toggle('show');
+
+  if (clicou) {
+    menuIcon.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    menuIcon.style.width = '100%';
+  } else {
+    menuIcon.style.backgroundColor = '';
+    menuIcon.style.width = '';
+  }
+});
+   </script>
+
+
+</body>
+
+</html>
