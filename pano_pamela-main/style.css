@@ -363,7 +363,7 @@ footer > p{
     display: flex;
   }
   h1 {
-    font-size: 2.4em;
+    font-size: 2em;
     width: 290px;
   }
 
@@ -451,8 +451,8 @@ footer > p{
 
   #segunda-logo {
     padding-top: 20px;
-    height: 100px;
-    width: 400px;
+    height: 80px;
+    width: 300px;
   }
 
   #container-conheca-paragrafo {

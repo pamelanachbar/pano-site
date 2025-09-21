@@ -1,6 +1,6 @@
+
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +13,6 @@ body {
   color: #000;
   line-height: 1.6;
 }
-
-
 
 #menu-icon {
   display: none;
@@ -51,12 +49,10 @@ nav {
   text-decoration: none;
 }
 
-
 .logo {
   height: 30px;
   margin-right: 20px;
 }
-
 #principal {
   text-align: left;
   padding: 60px 8%;
@@ -140,42 +136,65 @@ button:hover {
   color: #fff;
 }
 
-.tutorial {
-  padding: 60px 8%;
+section.tutorial {
+  position: relative;
+  padding: 60px 80px;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
-.tutorial h2 {
-  font-size: 1.6rem;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 25px;
+section.tutorial h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
 }
 
-#ios{
-  display: flex;
-  justify-content: flex-end;
-  text-align: end;
+section.tutorial ul {
+  list-style: disc;
+  padding-left: 20px;
+  position: relative;
+  z-index: 2;
+}
+ul > li{
+  margin: 30px;
+}
+/* --- ANDROID --- */
+section.android {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png");
+  background-position: right center;
+  background-size: 500px auto; 
+    height: 75vh;
 }
 
-.tutorial ul {
-  list-style: none;
+section.android::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0.94; /* mais claro */
+  pointer-events: none;
+  z-index: 1;
 }
 
-.tutorial li {
-  margin-bottom: 12px;
-  font-size: 1rem;
+/* --- iOS --- */
+section.ios {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg");
+  background-position: left center;
+  background-size: 420px auto; 
+  height: 75vh;
 }
 
-.tutorial strong {
-  color: #b10000;
-}
-
-.tutorial .final {
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-.tutorial .final span {
-  color: #b10000;
+section.ios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0.94;
+  pointer-events: none;
+  z-index: 1;
 }
 
 #ajuda {
@@ -388,5 +407,15 @@ button:hover {
   }
   nav {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  section.android {
+    background-size: 280px auto; 
+  }
+
+  section.ios {
+    background-size: 220px auto; 
   }
 }
