@@ -161,11 +161,6 @@
         border-radius: 100%;
     }
 
-    #paragrafos{
-        max-width: 800px;
-        text-align: justify;
-        margin: auto;
-    }
 
     
      h1 {
@@ -178,6 +173,8 @@
     }
 
  @media screen and (max-width: 601px) {
+
+
     #menu-icon {
     display: block;
     cursor: pointer;
@@ -241,12 +238,10 @@
   }
 
   #header  p{
-  width: 50vw;  
+  width: 60vw;  
 }
 
-  #paragrafo{
-    margin-left: 2em;
-  }
+
   
   #header {
   height: 60vh;
@@ -254,8 +249,9 @@
 }
 
 #paragrafo{
-  height: 80vh;
-
+  height: 60vh;
+  width: 100vw;
+   margin-left: 2em;
 }
 
  .cards {
@@ -302,7 +298,7 @@
   }
 
   .perfis-container {
-    position: relative; /* para os botões ficarem sobre os cards */
+    position: relative; 
   }
 
 }
@@ -371,9 +367,7 @@
   width: 50vw;  
 }
 
- #paragrafo{
-    margin-left: 2em;
-  }
+
 
     #header {
   height: 60vh;
@@ -381,7 +375,9 @@
 }
 
 #paragrafo{
-  height: 80vh;
+  height: 60vh;
+      margin-left: 2em;
+      width: 60vw;  
 
 }
 

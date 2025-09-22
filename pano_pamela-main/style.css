@@ -374,7 +374,7 @@ footer > p{
 
 
   #container-texto>h2 {
-    font-size: 2.0em;
+    font-size: 1.8em;
     margin-top: 50px;
     margin-left: 10px;
     margin-right: 10px;
@@ -403,7 +403,7 @@ footer > p{
 } */
 
   #container-carrossel>h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     padding-top: 60px;
     margin-left: 50px;
     margin-right: 50px;
@@ -411,7 +411,7 @@ footer > p{
 
   #container-carrossel>p {
     margin: 20px;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 100;
   }
 
