@@ -10,6 +10,9 @@
     box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
 
 #header {
   position: relative;
@@ -33,7 +36,6 @@
 #header p {
   color: white;
   font-family: "Montserrat";
-  z-index: 2; 
   position: relative;
 }
 
@@ -53,6 +55,8 @@
   cursor: pointer;
   padding-left: 10px;
   padding-top: 5px;
+  z-index: 10000;
+  position: relative;
 }
 
 
@@ -60,7 +64,7 @@
         width: 100%;
         display: flex;
         position: absolute;
-        z-index: 2;
+        z-index: 9999;
         align-items: center;
         justify-self: center;
     }
@@ -83,7 +87,7 @@
     }
 
     #icone{
-      z-index: 2;
+      z-index: 3;
       width: 40px;
     }
 
@@ -172,14 +176,38 @@
         text-align: center;
     }
 
+    #container-nav,
+#menu-icon,
+#main-menu {
+  position: relative;
+  z-index: 99999 !important;
+}
+
+/* o overlay deve ficar sempre atrás */
+#header::before {
+  z-index: 0 !important;
+}
+#paragrafo {
+  position: relative;
+  z-index: 1;
+}
+
+#menu-icon {
+  position: relative;
+  z-index: 10001 !important; /* ícone sempre acima */
+}
+
+#main-menu {
+  z-index: 10000 !important; /* menu abaixo do ícone */
+}
+
  @media screen and (max-width: 601px) {
 
-
-    #menu-icon {
+ #menu-icon {
     display: block;
     cursor: pointer;
     position: relative;
-    z-index: 1002;
+    z-index: 10000;
 
   }
 
@@ -188,7 +216,8 @@
   height: auto;
   display: block;
 }
- #main-menu {
+
+  #main-menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -204,7 +233,7 @@
   padding: 0;             
   padding-top: 56px;        
   align-items: center;
-  
+ 
 }
 
 #main-menu a {
@@ -213,7 +242,6 @@
   padding: 12px 0;
   font-size: 1.2em;
   text-align: center;
-    
 }
 
 
@@ -225,7 +253,6 @@
   text-decoration: none;
   font-size: 1.2em;
   transition: all 0.3s ease;
-
   }
 
   #main-menu a:hover {
@@ -308,7 +335,7 @@
     display: block;
     cursor: pointer;
     position: relative;
-    z-index: 1002;
+    z-index: 10000;
 
   }
 
@@ -326,7 +353,7 @@
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9); 
     padding: 20px 0;
-    z-index: 1001;
+    z-index: 9999;
   }
 
   nav#main-menu {
@@ -434,7 +461,7 @@
     display: block;
     cursor: pointer;
     position: relative;
-    z-index: 1002;
+    z-index: 10000;
 
   }
 
@@ -452,7 +479,7 @@
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9); 
     padding: 20px 0;
-    z-index: 1002;
+    z-index: 9999;
   }
 
   nav#main-menu {
